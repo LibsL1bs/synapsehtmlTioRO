@@ -1,0 +1,87 @@
+NOTAS DE SEGURANÇA
+relatorios de pontos a reforcar na segurança do sistema
+mudanças ja aplicadas ficam na sessão "concluidas"
+
+
+=================================================================================================
+------------------------------------------- PENDENTES -------------------------------------------
+=================================================================================================
+
+Data: 2026-03-12
+
+RESUMO DA MUDANÇA
+- A página de Perfil passou a enviar requisições com headers administrativos
+    (fluxo requireAdmin + useFallbackAdmin), em vez de usar os headers do usuário logado.
+
+- Objetivo imediato: evitar falha de acesso para usuários com role "user" quando a rota 
+    /users/:id exige contexto admin.
+
+-------------------------------------------------------------------------------------------------
+
+EXPLICAÇÃO DETALHADA
+No fluxo atual, as rotas /users e /users/:id estão protegidas por middleware administrativo.
+Como a página de Perfil chamava /users/:id com o contexto do usuário comum, o backend retornava:
+"Header X-Request-Source deve ser admin."
+
+-------------------------------------------------------------------------------------------------
+
+Como ajuste de curto prazo, a tela de Perfil passou a usar autenticação administrativa para:
+1) carregar dados do perfil,
+2) validar senha atual,
+3) salvar alterações do perfil.
+
+Isso restaura o funcionamento da tela, mas não é a arquitetura mais segura para longo prazo,
+pois transfere parte da responsabilidade de autorização para o frontend.
+
+-------------------------------------------------------------------------------------------------
+
+ANOTAÇÕES IMPORTANTES
+1) RISCO DE SEGURANÇA
+- Não confiar no frontend para limitar qual id_user pode ser consultado/alterado.
+- O backend deve validar ownership (usuário só pode acessar o próprio recurso),
+  exceto quando role=admin.
+
+-------------------------------------------------------------------------------------------------
+
+2) MELHORIA RECOMENDADA (BACKEND)
+- Criar rotas de perfil específicas e públicas para autenticados, por exemplo:
+  - GET /profile/me
+  - PUT /profile/me
+- Essas rotas devem usar o token do próprio usuário e ignorar id vindo do cliente.
+
+-------------------------------------------------------------------------------------------------
+
+3) ESCOPO DO MIDDLEWARE ADMIN
+- Manter requireAdminAuth apenas em rotas realmente administrativas:
+  - listagem global de usuários,
+  - criação de usuário por admin,
+  - atualização/deleção de terceiros.
+
+-------------------------------------------------------------------------------------------------
+
+4) LOGIN E AUDITORIA
+- Manter /auth/login público para autenticação.
+- Registrar auditoria de ações sensíveis (quem alterou, quando, qual id afetado).
+
+-------------------------------------------------------------------------------------------------
+
+5) PRÓXIMA AÇÃO SUGERIDA
+- Implementar regra server-side owner-or-admin nas rotas /users/:id.
+- Depois migrar Perfil para /profile/me e remover dependência de headers admin na tela.
+
+
+//////////////////////////////////////////////////////////////////////////////////////////////////
+
+
+
+
+
+
+
+
+
+
+
+=================================================================================================
+------------------------------------------- CONCLUIDAS ------------------------------------------
+=================================================================================================

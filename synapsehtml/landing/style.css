@@ -1,0 +1,10 @@
+@import url("../react-compiled.css");
+@import url("../styles.css");
+
+.syn-landing-bg {
+  background:
+    radial-gradient(circle at 20% 20%, hsl(var(--alert) / 0.13), transparent 40%),
+    radial-gradient(circle at 80% 30%, hsl(var(--success) / 0.08), transparent 45%),
+    linear-gradient(180deg, hsl(var(--surface-1)), hsl(var(--background)));
+  opacity: 0.75;
+}

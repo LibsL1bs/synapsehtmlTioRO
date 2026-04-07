@@ -1,0 +1,7 @@
+@import url("../react-compiled.css");
+@import url("../styles.css");
+
+.syn-memory-pre {
+  max-height: 220px;
+  overflow: auto;
+}

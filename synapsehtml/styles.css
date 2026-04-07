@@ -1,0 +1,80 @@
+@import url("./common.css");
+
+.table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.table th,
+.table td {
+  border-bottom: 1px solid var(--border);
+  padding: 8px;
+  text-align: left;
+  font-size: 0.9rem;
+}
+
+.chat-log {
+  flex: 1;
+  overflow: auto;
+  padding: 10px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.msg {
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  padding: 8px;
+  background: var(--panel-2);
+  white-space: pre-wrap;
+}
+
+.msg.user {
+  border-color: var(--alert);
+}
+
+.chat-input {
+  display: flex;
+  gap: 6px;
+  padding: 10px;
+  border-top: 1px solid var(--border);
+}
+
+.chat-input input {
+  flex: 1;
+}
+
+.notice {
+  border: 1px dashed var(--border);
+  border-radius: 8px;
+  padding: 10px;
+  color: var(--muted);
+}
+
+@media (max-width: 1100px) {
+  .layout {
+    grid-template-columns: 220px 1fr;
+  }
+
+  .chat {
+    display: none;
+  }
+}
+
+@media (max-width: 720px) {
+  .cards.cols-2,
+  .cards.cols-3,
+  .cards.cols-4 {
+    grid-template-columns: 1fr;
+  }
+
+  .layout {
+    grid-template-columns: 1fr;
+  }
+
+  .sidebar {
+    border-right: 0;
+    border-bottom: 1px solid var(--border);
+  }
+}

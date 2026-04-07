@@ -1,0 +1,40 @@
+{
+  "arquivos": [
+    {
+      "id": "tolerancia_volume_rpe",
+      "tipo": "dados_fisiologicos",
+      "descricao": "Dados sobre como o usuário tolera volume e intensidade (RPE) em seus treinos de powerlifting.",
+      "quando_usar": "Perguntas sobre planejamento de treino influenciado por tolerância a volume ou intensidade.",
+      "arquivo": "tolerancia-volume-rpe.json"
+    },
+    {
+      "id": "medidas_corpo_anatomia",
+      "tipo": "dados_anatomicos",
+      "descricao": "Medidas corporais e informações anatômicas do usuário.",
+      "quando_usar": "Perguntas que envolvem análises ou considerações baseadas nas medidas corporais e anatomia.",
+      "arquivo": "medidas-corpo.json"
+    }
+  ],
+  "treinos": [
+    {
+      "id": "treino_segunda",
+      "arquivo": "treino-segunda.json"
+    },
+    {
+      "id": "treino_terca",
+      "arquivo": "treino-terca.json"
+    },
+    {
+      "id": "treino_quarta",
+      "arquivo": "treino-quarta.json"
+    },
+    {
+      "id": "treino_quinta",
+      "arquivo": "treino-quinta.json"
+    },
+    {
+      "id": "treino_sexta",
+      "arquivo": "treino-sexta.json"
+    }
+  ]
+}

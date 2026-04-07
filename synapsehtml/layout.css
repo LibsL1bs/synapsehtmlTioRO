@@ -1,0 +1,82 @@
+.page {
+  min-height: 100vh;
+}
+
+.container {
+  width: var(--syn-content-width);
+  margin: 0 auto;
+}
+
+.top-nav {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 12px 0;
+  border-bottom: 1px solid var(--syn-border);
+}
+
+.layout {
+  display: grid;
+  grid-template-columns: 220px 1fr 320px;
+  min-height: 100vh;
+}
+
+.sidebar,
+.chat {
+  background: var(--syn-panel);
+}
+
+.sidebar {
+  border-right: 1px solid var(--syn-border);
+  padding: 14px;
+}
+
+.chat {
+  border-left: 1px solid var(--syn-border);
+  display: flex;
+  flex-direction: column;
+}
+
+.main {
+  padding: 18px;
+}
+
+.header {
+  border-bottom: 1px solid var(--syn-border);
+  padding-bottom: 10px;
+  margin-bottom: 14px;
+}
+
+.syn-auth-grid {
+  min-height: 100vh;
+  display: flex;
+}
+
+.syn-auth-left {
+  width: 50%;
+  border-right: 1px solid var(--syn-border);
+  position: relative;
+  overflow: hidden;
+  display: none;
+}
+
+@media (min-width: 1024px) {
+  .syn-auth-left {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+}
+
+.syn-auth-right {
+  flex: 1;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 2rem;
+}
+
+.syn-auth-form {
+  width: 100%;
+  max-width: 24rem;
+}

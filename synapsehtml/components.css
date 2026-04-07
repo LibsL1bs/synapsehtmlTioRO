@@ -1,0 +1,200 @@
+.brand {
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+}
+
+.actions {
+  display: flex;
+  gap: 8px;
+}
+
+.btn {
+  border: 1px solid var(--syn-border);
+  background: var(--syn-panel);
+  color: var(--syn-text);
+  padding: 8px 12px;
+  border-radius: var(--syn-radius-md);
+}
+
+.btn:hover {
+  opacity: 0.9;
+}
+
+.btn-primary {
+  background: var(--syn-alert);
+  border-color: var(--syn-alert);
+  color: #111;
+  font-weight: 600;
+}
+
+.btn-danger {
+  background: var(--syn-danger);
+  border-color: var(--syn-danger);
+  color: #fff;
+}
+
+.cards {
+  display: grid;
+  gap: 12px;
+}
+
+.cards.cols-2 {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+.cards.cols-3 {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+
+.cards.cols-4 {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+
+.card {
+  background: var(--syn-panel);
+  border: 1px solid var(--syn-border);
+  border-radius: var(--syn-radius-md);
+  padding: 14px;
+}
+
+.card h3,
+.card h4,
+.card p {
+  margin: 0;
+}
+
+.card p {
+  color: var(--syn-muted);
+  margin-top: 8px;
+  font-size: 0.92rem;
+}
+
+.auth-wrap {
+  min-height: 100vh;
+  display: grid;
+  place-items: center;
+  padding: 20px;
+}
+
+.auth-card {
+  width: min(420px, 100%);
+  background: var(--syn-panel);
+  border: 1px solid var(--syn-border);
+  border-radius: var(--syn-radius-lg);
+  padding: 18px;
+}
+
+.field {
+  margin-top: 12px;
+}
+
+.field label {
+  display: block;
+  font-size: 0.8rem;
+  color: var(--syn-muted);
+  margin-bottom: 6px;
+}
+
+.field input,
+.field textarea,
+.field select {
+  width: 100%;
+  background: var(--syn-panel-strong);
+  border: 1px solid var(--syn-border);
+  color: var(--syn-text);
+  border-radius: var(--syn-radius-md);
+  padding: 9px 10px;
+}
+
+.hint {
+  color: var(--syn-muted);
+  font-size: 0.85rem;
+}
+
+.error {
+  color: var(--syn-danger);
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.ok {
+  color: var(--syn-success);
+  margin-top: 8px;
+  font-size: 0.9rem;
+}
+
+.menu {
+  display: grid;
+  gap: 4px;
+}
+
+.menu button {
+  text-align: left;
+}
+
+.menu .active {
+  border-color: var(--syn-alert);
+}
+
+.metric {
+  font-size: 1.6rem;
+  font-weight: 700;
+}
+
+.kv {
+  display: grid;
+  grid-template-columns: 190px 1fr;
+  gap: 8px;
+}
+
+.kv div {
+  padding: 9px;
+  border: 1px solid var(--syn-border);
+  border-radius: var(--syn-radius-md);
+  background: var(--syn-panel);
+}
+
+.syn-logo {
+  display: block;
+  width: 18px;
+  height: 18px;
+  object-fit: contain;
+}
+
+.syn-logo-sm {
+  width: 14px;
+  height: 14px;
+}
+
+.syn-logo-md {
+  width: 20px;
+  height: 20px;
+}
+
+.syn-dot {
+  width: 6px;
+  height: 6px;
+  border-radius: 999px;
+}
+
+.syn-chat-msg {
+  max-width: 90%;
+  border-radius: var(--syn-radius-sm);
+  padding: 8px 10px;
+  font-size: 12px;
+  line-height: 1.35;
+  border: 1px solid transparent;
+  white-space: pre-wrap;
+}
+
+.syn-chat-msg.user {
+  background-color: var(--syn-alert);
+  color: var(--syn-alert-foreground);
+  border-color: color-mix(in srgb, var(--syn-alert) 80%, transparent);
+  margin-left: auto;
+}
+
+.syn-chat-msg.assistant {
+  color: var(--syn-muted);
+}

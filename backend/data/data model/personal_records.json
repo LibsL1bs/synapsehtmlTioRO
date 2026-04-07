@@ -1,0 +1,44 @@
+[
+    {
+        "exercise": "Bench Press",
+        "exercise_id": 1,
+        "1RM": 200,
+        "date": "2024-05-01",
+        "last_pr": {
+            "weight": 195,
+            "reps": 3,
+            "sets": 5,
+            "rpe": 8,
+            "date": "2024-04-01",
+            "notes": "Felt strong, could have done more reps."
+        }
+    },
+    {
+        "exercise": "Squat",
+        "exercise_id": 2,
+        "1RM": 200,
+        "date": "2024-05-01",
+        "last_pr": {
+            "weight": 195,
+            "reps": 3,
+            "sets": 5,
+            "rpe": 8,
+            "date": "2024-04-01",
+            "notes": "Felt strong, could have done more reps."
+        }
+    },
+    {
+        "exercise": "Deadlift",
+        "exercise_id": 3,
+        "1RM": 200,
+        "date": "2024-05-01",
+        "last_pr": {
+            "weight": 195,
+            "reps": 3,
+            "sets": 5,
+            "rpe": 8,
+            "date": "2024-04-01",
+            "notes": "Felt strong, could have done more reps."
+        }
+    }
+]

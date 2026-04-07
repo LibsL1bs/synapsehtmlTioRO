@@ -1,0 +1,166 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synapse • Educacional</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="flex h-screen w-full overflow-hidden surface-0">
+    <aside
+      class="h-screen flex flex-col border-r border-border surface-1 transition-all duration-200 ease-out z-50 shrink-0"
+      style="width: 180px;">
+      <div class="h-12 flex items-center justify-center border-b border-border">
+        <div class="flex items-center gap-2"><img src="../synapse.svg" alt="Synapse"
+            class="syn-logo syn-logo-md" /><span
+            class="text-xs font-bold text-foreground tracking-[0.2em] uppercase font-mono">SYNAPSE</span></div>
+      </div>
+      <nav class="flex-1 flex flex-col gap-0.5 p-1.5 mt-1 overflow-y-auto"><button data-route="dashboard"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Dashboard</span></button><button
+          data-route="dados"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Dados</span></button><button data-route="perfil"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Perfil</span></button><button
+          data-route="metricas"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Métricas</span></button><button
+          data-route="educacional"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer surface-3 text-foreground">
+          <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-6 bg-alert rounded-r-sm"></div><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Educacional</span>
+        </button>        <button data-route="treinos"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Treinos</span></button>        <div class="my-2 px-2" data-admin-only>
+          <div class="tech-divider"></div><span
+            class="text-[8px] font-mono text-muted-foreground/50 tracking-[0.25em] uppercase mt-1 block">ADMIN</span>
+        </div><button data-route="adminSistema" data-admin-only
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Sistema</span></button><button
+          data-route="adminUsuarios" data-admin-only
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Usuários</span></button><button
+          data-route="adminLogs" data-admin-only
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Logs IA</span></button><button
+          data-route="adminTestes" data-admin-only
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Testes</span></button><button
+          data-route="adminDados" data-admin-only
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Dados</span></button>
+      </nav>
+      <div class="p-1.5 border-t border-border">
+        <div class="flex items-center justify-center mb-1.5">
+          <div class="w-1.5 h-1.5 rounded-full bg-success"></div><span
+            class="ml-2 text-[10px] text-muted-foreground font-mono uppercase tracking-wider">Online</span>
+        </div><button id="logout-btn"
+          class="w-full flex items-center gap-3 px-3 py-2 rounded-sm text-muted-foreground/60 hover:text-alert hover:surface-2 transition-all duration-150 cursor-pointer"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Sair</span></button>
+      </div>
+    </aside>
+    <main class="flex-1 overflow-y-auto p-5 space-y-4 max-w-5xl mx-auto animate-fade-in">
+      <div class="pb-3 border-b border-border">
+        <h1 class="text-lg font-bold text-foreground uppercase tracking-wide">Educacional</h1>
+        <p class="text-[10px] text-muted-foreground mt-0.5 font-mono tracking-wider">FUNDAMENTOS E CONCEITOS DE
+          POWERLIFTING</p>
+      </div>
+      <div>
+        <h2
+          class="text-[10px] font-semibold text-muted-foreground uppercase tracking-[0.2em] mb-2 flex items-center gap-2 font-mono">
+          Fundamentos</h2>
+        <div class="space-y-1.5"><button type="button"
+            class="edu-card w-full text-left surface-2 rounded-sm border border-border p-3 panel-shadow hover:border-alert/30 transition-all duration-150 group"
+            aria-expanded="false">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xs font-semibold text-foreground font-mono">Periodização Linear vs Ondulada</h3><span
+                class="edu-card-indicator w-3.5 h-3.5 text-muted-foreground group-hover:text-alert transition-colors">›</span>
+            </div>
+            <p class="text-[11px] text-muted-foreground mt-1 leading-relaxed">Entenda as diferenças entre modelos de
+              progressão e quando aplicar cada um.</p>
+            <div class="edu-card-content">
+              <p>Na periodização linear, o treino costuma evoluir de forma previsível: o volume tende a cair enquanto a intensidade sobe ao longo dos blocos.</p>
+              <p>Esse modelo facilita visualizar progressão semana a semana, sendo útil para construir base técnica, consolidar força geral e organizar ciclos mais simples.</p>
+              <p>Na periodização ondulada, as variações de carga, repetições e volume acontecem com maior frequência, às vezes no mesmo microciclo.</p>
+              <p>Na prática, isso pode significar um dia mais pesado, outro moderado e outro mais voltado para volume ou velocidade dentro da mesma semana.</p>
+              <p>O posicionamento do ACSM sobre progressão em treinamento resistido recomenda o uso de faixas de carga variadas de forma periodizada, especialmente para praticantes intermediários e avançados.</p>
+              <p>Já revisões sistemáticas e meta-análises com volume equalizado indicam que linear e ondulada tendem a produzir resultados semelhantes de hipertrofia quando o programa é bem montado.</p>
+              <p>Isso sugere que a escolha do modelo não depende apenas de “qual é melhor”, mas também de aderência, preferência do atleta, calendário competitivo e controle de fadiga.</p>
+              <p>Para muitos iniciantes, a linear é mais fácil de executar e monitorar. Para atletas mais experientes, a ondulada costuma oferecer variedade e melhor ajuste entre estímulo e recuperação.</p>
+              <p>Resumo prático: se o objetivo é simplicidade e leitura clara da evolução, a linear funciona muito bem; se o objetivo é variar estímulos mantendo desempenho ao longo da semana, a ondulada costuma ser vantajosa.</p>
+              <p>Baseado em ACSM Position Stand sobre modelos de progressão e na revisão sistemática de Grgic et al. sobre periodização linear e ondulada.</p>
+            </div>
+          </button><button type="button"
+            class="edu-card w-full text-left surface-2 rounded-sm border border-border p-3 panel-shadow hover:border-alert/30 transition-all duration-150 group"
+            aria-expanded="false">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xs font-semibold text-foreground font-mono">RPE e RIR: Guia Prático</h3><span
+                class="edu-card-indicator w-3.5 h-3.5 text-muted-foreground group-hover:text-alert transition-colors">›</span>
+            </div>
+            <p class="text-[11px] text-muted-foreground mt-1 leading-relaxed">Como usar escalas de esforço para
+              autoregular seu treino de forma eficiente.</p>
+            <div class="edu-card-content">
+              <p>RPE é a percepção de esforço da série. No treino de força, a escala prática mais usada vai de 1 a 10 e ajuda a estimar quão perto você chegou do limite.</p>
+              <p>RIR significa repetições em reserva, ou seja, quantas repetições ainda sobrariam antes da falha técnica ou muscular.</p>
+              <p>Na aplicação moderna para treino resistido, RPE e RIR são lidos em conjunto: RPE 10 equivale a 0 RIR, RPE 9 equivale a 1 RIR e RPE 8 equivale a 2 RIR.</p>
+              <p>Esse sistema é útil porque a performance real varia de um dia para outro por sono, estresse, alimentação, dores acumuladas e fadiga do ciclo.</p>
+              <p>Em vez de prender toda a sessão a um percentual fixo de 1RM, o atleta consegue ajustar a carga para que o esforço do dia bata com o objetivo do treino.</p>
+              <p>Pesquisas sobre escalas baseadas em RIR mostram que elas são especialmente úteis em séries próximas da falha, nas quais o atleta consegue estimar melhor o que ainda restava.</p>
+              <p>Também há evidência de que levantadores mais experientes tendem a usar essa ferramenta com mais precisão do que iniciantes, então novatos devem aprender a escala gradualmente.</p>
+              <p>Para hipertrofia, costuma fazer sentido trabalhar muitas séries entre RPE 8 e 10. Para movimentos principais de força, frequentemente é útil manter parte relevante do volume entre 2 e 4 RIR para preservar técnica e recuperação.</p>
+              <p>Na prática, você pode combinar os dois mundos: prescrever uma carga estimada e confirmar se a série terminou no esforço esperado. Se sobrou mais do que o previsto, aumenta-se a carga; se sobrou menos, reduz-se.</p>
+              <p>Resumo prático: RPE e RIR transformam sensação subjetiva em ajuste objetivo, melhorando autorregulação sem abandonar estrutura no planejamento.</p>
+              <p>Baseado na revisão de Helms, Cronin, Storey e Zourdos sobre aplicação de RIR-based RPE em treinamento resistido.</p>
+            </div>
+          </button><button type="button"
+            class="edu-card w-full text-left surface-2 rounded-sm border border-border p-3 panel-shadow hover:border-alert/30 transition-all duration-150 group"
+            aria-expanded="false">
+            <div class="flex items-center justify-between">
+              <h3 class="text-xs font-semibold text-foreground font-mono">Princípios de Sobrecarga Progressiva</h3><span
+                class="edu-card-indicator w-3.5 h-3.5 text-muted-foreground group-hover:text-alert transition-colors">›</span>
+            </div>
+            <p class="text-[11px] text-muted-foreground mt-1 leading-relaxed">A base de todo programa de força: como
+              aplicar com inteligência.</p>
+            <div class="edu-card-content">
+              <p>Sobrecarga progressiva é o princípio de aumentar a exigência do treino ao longo do tempo para continuar gerando adaptação.</p>
+              <p>Esse aumento não acontece só pela carga na barra. Também pode vir por mais repetições, mais séries, melhor execução, maior amplitude, maior densidade ou menor ajuda externa.</p>
+              <p>O ACSM destaca que a progressão deve ser aplicada conforme o nível de treino e o objetivo, e sugere aumentos graduais de carga quando o praticante consegue exceder a meta de repetições planejada.</p>
+              <p>Uma referência prática comum é subir algo entre 2% e 10% da carga quando o atleta executa uma ou duas repetições além do alvo com boa técnica.</p>
+              <p>Isso mostra que progressão eficiente não é forçar aumento toda sessão, mas reconhecer quando o corpo já está pronto para suportar um estímulo maior.</p>
+              <p>Revisões sobre hipertrofia e adaptações musculares também reforçam que o resultado depende da interação entre volume, intensidade, descanso e recuperação, não apenas de “colocar mais peso”.</p>
+              <p>Além disso, excesso de fadiga pode atrapalhar a própria progressão. Se o aumento de carga reduz muito a qualidade do movimento ou derruba o volume total, a adaptação pode piorar.</p>
+              <p>Por isso, a sobrecarga precisa ser sustentável: pequenas progressões consistentes costumam funcionar melhor do que saltos grandes seguidos de estagnação.</p>
+              <p>Outra ideia importante é que o corpo responde tanto ao estresse mecânico quanto ao estresse metabólico. Dependendo do exercício e da fase, ambos podem ser usados para progredir.</p>
+              <p>Resumo prático: progrida com critério, preserve a técnica, acompanhe a recuperação e trate a evolução como um processo acumulativo, não como uma corrida para aumentar peso a qualquer custo.</p>
+              <p>Baseado no ACSM Position Stand sobre progressão em treinamento resistido e em revisões sobre adaptações musculares e estresse metabólico no treino de força.</p>
+            </div>
+          </button></div>
+      </div>
+    </main>
+    <aside class="h-screen flex flex-col border-l border-border shrink-0"
+      style="background:hsl(var(--chat-background)); width:300px;">
+      <div class="h-12 flex items-center justify-between px-3 border-b border-border">
+        <div class="flex items-center gap-2"><span
+            class="text-[10px] font-medium text-muted-foreground uppercase tracking-[0.15em] font-mono">Assistente</span>
+        </div>
+      </div>
+      <div class="flex-1 overflow-y-auto p-3 space-y-3" id="chat-log"></div>
+      <div class="p-2 border-t border-border">
+        <form id="chat-form" class="flex items-center gap-2 rounded-sm px-3 py-1.5 border border-border"
+          style="background:hsl(var(--chat-input));"><input name="pergunta" type="text"
+            placeholder="Pergunte ao assistente..."
+            class="flex-1 bg-transparent text-xs text-foreground placeholder:text-muted-foreground outline-none font-mono" /><button
+            type="submit"
+            class="p-1 rounded-sm hover:surface-3 text-muted-foreground hover:text-foreground transition-colors">Enviar</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>

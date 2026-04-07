@@ -1,0 +1,49 @@
+
+
+ Based on the given instructions, here is how the data extraction and file update process should be performed:
+
+1. Read the content of each file provided in the list.
+2. Analyze the user message to find any relevant information for that specific file.
+3. If there is any relevant information, update the content by modifying or adding only the specified data mentioned in the user message (without inventing new information).
+4. If there is no relevant information, maintain the original content.
+5. Repeat this process for all the listed files.
+6. Create a JSON object with the updated list of files.
+7. Ensure that the output JSON follows the provided format:
+
+```
+{
+  "arquivos": [
+    {
+      "nome": "nome_do_arquivo",
+      "data_nota": "data_atual",
+      "conteudo": "conteudo_editado_ou_original"
+    }
+  ]
+}
+```
+
+In this example, the user provided a measurement for their arm (45cm) and information about sleep duration on Thursday (3 hours). To update the files based on the user's message:
+
+1. Extract the 'medidas corporais' file and analyze the user message for relevant data (arm size).
+2. Since there is a relevant piece of information, update the humerus_size field in the 'conteudo' of the 'medidas corporais' file to 45.
+3. Extract the 'estado 2026/03/03' file and analyze the user message for relevant data (sleep duration).
+4. Since there is a relevant piece of information, update the 'sono-quinta' field in the 'conteudo' of the 'estado 2026/03/03' file to 3.
+5. Maintain the original content for any other files.
+6. Create a JSON object with the updated list of files:
+
+```
+{
+  "arquivos": [
+    {
+      "nome": "medidas corporais",
+      "data_nota": "2026-03-03",
+      "conteudo": "{\n  \"weight\": 80,\n  \"body_fat\": 20,\n  \"muscle_mass\": 60,\n  \"femur_size\": 50,\n  \"humerus_size\": 45,\n  \"calf_size\": 40,\n  \"thigh_size\": 60,\n  \"quadriceps_size\": 55,\n  \"notes\": \"notes\"\n}"
+    },
+    {
+      "nome": "estado 2026/03/03",
+      "data_nota": "2026-03-03",
+      "conteudo": "{\n  \"BP\": 70,\n  \"DL\": 160,\n  \"squat\": 160,\n  \"calorias\": 1400,\n  \"sono-domingo\": 6,\n  \"sono-quarta\": 7,\n  \"sono-quinta\": 3,\n  \"sono-sabado\": 9,\n  \"sono-segunda\": 80,\n  \"sono-sexta\": 8,\n  \"sono-terca\": 7,\n  \"proteinas\": 140,\n  \"readiness\": 10,\n  \"carboidratos\": 200,\n  \"fadiga neural aproximada\": 10\n}"
+    }
+  ]
+}
+```

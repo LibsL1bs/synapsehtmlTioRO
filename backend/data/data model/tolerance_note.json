@@ -1,0 +1,27 @@
+{
+    "ideal_volume": {
+        "warmup_reps": 8,
+        "work_reps": 5,
+        "warmup_sets": 3,
+        "work_sets": 5
+    },
+    "ideal_intensity": {
+        "warmup_rpe": 6,
+        "work_rpe": 8
+    },
+    "ideal_acessory_volume": {
+        "warmup_reps": 10,
+        "work_reps": 8,
+        "warmup_sets": 2,
+        "work_sets": 4
+    },
+    "ideal_acessory_intensity": {
+        "warmup_rpe": 5,
+        "work_rpe": 7
+    },
+    "ideal_main_lift_week_frequency": {
+        "squat": 2,
+        "bench_press": 2,
+        "deadlift": 1.5
+    }
+}

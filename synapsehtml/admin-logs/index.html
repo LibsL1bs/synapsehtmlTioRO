@@ -1,0 +1,151 @@
+<!doctype html>
+<html lang="pt-BR">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Synapse • Admin Logs</title>
+  <link rel="stylesheet" href="./style.css" />
+</head>
+
+<body>
+  <div class="flex h-screen w-full overflow-hidden surface-0">
+    <aside
+      class="h-screen flex flex-col border-r border-border surface-1 transition-all duration-200 ease-out z-50 shrink-0"
+      style="width: 180px;">
+      <div class="h-12 flex items-center justify-center border-b border-border">
+        <div class="flex items-center gap-2">
+          <img src="../synapse.svg" alt="Synapse" class="syn-logo syn-logo-md" />
+          <span class="text-xs font-bold text-foreground tracking-[0.2em] uppercase font-mono">SYNAPSE</span>
+        </div>
+      </div>
+      <nav class="flex-1 flex flex-col gap-0.5 p-1.5 mt-1 overflow-y-auto">
+        <button data-route="dashboard"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Dashboard</span></button>
+        <button data-route="dados"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Dados</span></button>
+        <button data-route="perfil"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Perfil</span></button>
+        <button data-route="metricas"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Métricas</span></button>
+        <button data-route="educacional"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Educacional</span></button>
+        <button data-route="treinos"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Treinos</span></button>
+        <div class="my-2 px-2">
+          <div class="tech-divider"></div><span
+            class="text-[8px] font-mono text-muted-foreground/50 tracking-[0.25em] uppercase mt-1 block">ADMIN</span>
+        </div>
+        <button data-route="adminSistema"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Sistema</span></button>
+        <button data-route="adminUsuarios"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Usuários</span></button>
+        <button data-route="adminLogs"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer surface-3 text-foreground">
+          <div class="absolute left-0 top-1/2 -translate-y-1/2 w-[2px] h-6 bg-alert rounded-r-sm"></div><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Logs IA</span>
+        </button>
+        <button data-route="adminTestes"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Testes</span></button>
+        <button data-route="adminDados"
+          class="relative flex items-center gap-3 px-3 py-2 rounded-sm transition-all duration-150 cursor-pointer text-muted-foreground hover:text-foreground hover:surface-2"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Dados</span></button>
+      </nav>
+      <div class="p-1.5 border-t border-border">
+        <div class="flex items-center justify-center mb-1.5">
+          <div class="w-1.5 h-1.5 rounded-full bg-success"></div><span
+            class="ml-2 text-[10px] text-muted-foreground font-mono uppercase tracking-wider">Online</span>
+        </div>
+        <button id="logout-btn"
+          class="w-full flex items-center gap-3 px-3 py-2 rounded-sm text-muted-foreground/60 hover:text-alert hover:surface-2 transition-all duration-150 cursor-pointer"><span
+            class="text-xs font-medium whitespace-nowrap tracking-wide">Sair</span></button>
+      </div>
+    </aside>
+
+    <main class="flex-1 overflow-y-auto p-5 space-y-4 max-w-5xl mx-auto animate-fade-in">
+      <div class="pb-3 border-b border-border">
+        <h1 class="text-lg font-bold text-foreground uppercase tracking-wide">Logs IA</h1>
+        <p class="text-[10px] text-muted-foreground mt-0.5 font-mono tracking-wider">HISTÓRICO DE INTERAÇÕES COM A IA
+        </p>
+      </div>
+      <div class="flex items-center gap-2 flex-wrap">
+        <button
+          class="text-[9px] font-mono tracking-[0.15em] px-2.5 py-1 border transition-colors border-foreground/30 text-foreground">TODOS</button>
+        <button
+          class="text-[9px] font-mono tracking-[0.15em] px-2.5 py-1 border transition-colors border-border text-muted-foreground hover:text-foreground hover:border-foreground/20">INFO</button>
+        <button
+          class="text-[9px] font-mono tracking-[0.15em] px-2.5 py-1 border transition-colors border-border text-muted-foreground hover:text-foreground hover:border-foreground/20">ACTION</button>
+        <button
+          class="text-[9px] font-mono tracking-[0.15em] px-2.5 py-1 border transition-colors border-border text-muted-foreground hover:text-foreground hover:border-foreground/20">ERROR</button>
+        <button
+          class="text-[9px] font-mono tracking-[0.15em] px-2.5 py-1 border transition-colors border-border text-muted-foreground hover:text-foreground hover:border-foreground/20">MODEL_USED</button>
+      </div>
+      <div class="space-y-2">
+        <div class="border border-border p-3 hover:surface-1 transition-colors">
+          <div class="flex items-center gap-3 mb-2"><span
+              class="text-[10px] font-mono text-muted-foreground/60">14:32:01</span><span
+              class="text-[9px] font-mono tracking-[0.15em] px-2 py-0.5 border text-muted-foreground border-border">INFO</span><span
+              class="text-[9px] font-mono text-muted-foreground">gpt-4o</span><span
+              class="text-[9px] font-mono text-muted-foreground/50 ml-auto">842 tokens</span></div>
+          <div class="flex items-center gap-2 mb-1"><span
+              class="text-[10px] font-mono text-foreground/80">analyze_readiness</span></div>
+          <p class="text-[10px] font-mono text-muted-foreground leading-relaxed">Readiness calculado: 72. Fatores:
+            fadiga neural moderada...</p>
+        </div>
+        <div class="border border-border p-3 hover:surface-1 transition-colors">
+          <div class="flex items-center gap-3 mb-2"><span
+              class="text-[10px] font-mono text-muted-foreground/60">14:28:15</span><span
+              class="text-[9px] font-mono tracking-[0.15em] px-2 py-0.5 border text-success border-success/40">ACTION</span><span
+              class="text-[9px] font-mono text-muted-foreground">gpt-4o</span><span
+              class="text-[9px] font-mono text-muted-foreground/50 ml-auto">1204 tokens</span></div>
+          <div class="flex items-center gap-2 mb-1"><span
+              class="text-[10px] font-mono text-foreground/80">generate_workout</span></div>
+          <p class="text-[10px] font-mono text-muted-foreground leading-relaxed">Treino gerado para segunda-feira.
+            Volume reduzido 15%...</p>
+        </div>
+        <div class="border border-border p-3 hover:surface-1 transition-colors">
+          <div class="flex items-center gap-3 mb-2"><span
+              class="text-[10px] font-mono text-muted-foreground/60">14:20:44</span><span
+              class="text-[9px] font-mono tracking-[0.15em] px-2 py-0.5 border text-alert border-alert/40">ERROR</span><span
+              class="text-[9px] font-mono text-muted-foreground">gpt-4o</span><span
+              class="text-[9px] font-mono text-muted-foreground/50 ml-auto">0 tokens</span></div>
+          <div class="flex items-center gap-2 mb-1"><span
+              class="text-[10px] font-mono text-foreground/80">parse_input</span></div>
+          <p class="text-[10px] font-mono text-muted-foreground leading-relaxed">Falha ao parsear entrada do usuário.
+            Input vazio.</p>
+        </div>
+      </div>
+    </main>
+
+    <aside class="h-screen flex flex-col border-l border-border shrink-0"
+      style="background:hsl(var(--chat-background)); width:300px;">
+      <div class="h-12 flex items-center justify-between px-3 border-b border-border">
+        <div class="flex items-center gap-2"><span
+            class="text-[10px] font-medium text-muted-foreground uppercase tracking-[0.15em] font-mono">Assistente</span>
+        </div>
+      </div>
+      <div class="flex-1 overflow-y-auto p-3 space-y-3" id="chat-log"></div>
+      <div class="p-2 border-t border-border">
+        <form id="chat-form" class="flex items-center gap-2 rounded-sm px-3 py-1.5 border border-border"
+          style="background:hsl(var(--chat-input));">
+          <input name="pergunta" type="text" placeholder="Pergunte ao assistente..."
+            class="flex-1 bg-transparent text-xs text-foreground placeholder:text-muted-foreground outline-none font-mono" />
+          <button type="submit"
+            class="p-1 rounded-sm hover:surface-3 text-muted-foreground hover:text-foreground transition-colors">Enviar</button>
+        </form>
+      </div>
+    </aside>
+  </div>
+  <script type="module" src="./script.js"></script>
+</body>
+
+</html>

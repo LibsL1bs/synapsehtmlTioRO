@@ -1,0 +1,56 @@
+{
+    "treino_ex":{
+        "id": 1,
+        "date": "date",
+        "exercicios": [
+            [
+                {
+                    "sets": [
+                        {
+                            "reps": 5,
+                            "weight": 100,
+                            "type": "warmup",
+                            "rpe": 6
+                        },
+                        {
+                            "reps": 5,
+                            "weight": 110,
+                            "type": "work",
+                            "rpe": 8
+                        },
+                        {
+                            "reps": 5,
+                            "weight": 120,
+                            "type": "work",
+                            "rpe": 9
+                        }
+                    ],
+                    "notes": "notes"
+                },
+                {
+                    "sets": [
+                        {
+                            "reps": 5,
+                            "weight": 100,
+                            "type": "warmup",
+                            "rpe": 6
+                        },
+                        {
+                            "reps": 5,
+                            "weight": 110,
+                            "type": "work",
+                            "rpe": 8
+                        },
+                        {
+                            "reps": 5,
+                            "weight": 120,
+                            "type": "work",
+                            "rpe": 9
+                        }
+                    ],
+                    "notes": "notes"
+                }
+            ]
+        ]
+    }
+}

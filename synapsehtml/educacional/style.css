@@ -1,0 +1,43 @@
+@import url("../react-compiled.css");
+@import url("../styles.css");
+
+.edu-card {
+	cursor: pointer;
+}
+
+.edu-card-content {
+	display: none;
+	margin-top: 0.6rem;
+	padding-top: 0.6rem;
+	border-top: 1px solid hsl(var(--border));
+}
+
+.edu-card-content p {
+	color: hsl(var(--muted-foreground));
+	font-size: 11px;
+	line-height: 1.45;
+	margin-bottom: 0.35rem;
+}
+
+.edu-card-content p:last-child {
+	margin-bottom: 0;
+}
+
+.edu-card-indicator {
+	display: inline-flex;
+	align-items: center;
+	justify-content: center;
+	transition: transform 150ms ease;
+}
+
+.edu-card.is-open {
+	border-color: hsl(var(--alert) / 0.4);
+}
+
+.edu-card.is-open .edu-card-content {
+	display: block;
+}
+
+.edu-card.is-open .edu-card-indicator {
+	transform: rotate(90deg);
+}

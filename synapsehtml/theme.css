@@ -1,0 +1,20 @@
+:root {
+  --syn-font-sans: "Space Grotesk", system-ui, sans-serif;
+  --syn-font-mono: "JetBrains Mono", monospace;
+  --syn-bg: hsl(var(--background, 240 6% 4%));
+  --syn-text: hsl(var(--foreground, 240 5% 90%));
+  --syn-muted: hsl(var(--muted-foreground, 240 4% 48%));
+  --syn-panel: hsl(var(--surface-1, 240 5% 7%));
+  --syn-panel-strong: hsl(var(--surface-2, 240 5% 10%));
+  --syn-border: hsl(var(--border, 240 4% 20%));
+  --syn-alert: hsl(var(--alert, 0 72% 51%));
+  --syn-alert-foreground: hsl(var(--alert-foreground, 0 0% 100%));
+  --syn-success: hsl(var(--success, 142 71% 45%));
+  --syn-danger: hsl(var(--destructive, 0 72% 51%));
+  --syn-chat-background: hsl(var(--chat-background, 240 5% 6%));
+  --syn-chat-input: hsl(var(--chat-input, 240 5% 10%));
+  --syn-radius-sm: 0.25rem;
+  --syn-radius-md: 0.5rem;
+  --syn-radius-lg: 0.625rem;
+  --syn-content-width: min(1100px, 92vw);
+}

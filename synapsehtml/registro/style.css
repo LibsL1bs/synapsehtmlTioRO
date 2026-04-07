@@ -1,0 +1,9 @@
+@import url("../react-compiled.css");
+@import url("../styles.css");
+
+.syn-auth-mesh {
+  background:
+    radial-gradient(circle at 25% 20%, hsl(var(--alert) / 0.15), transparent 35%),
+    radial-gradient(circle at 72% 65%, hsl(var(--muted-foreground) / 0.12), transparent 45%),
+    hsl(var(--surface-1));
+}
